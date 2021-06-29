@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">practiceMain</string>
+
+    <string-array name="materials">
+        <item>PIPES</item>
+        <item>ELBOWS - Long Radius</item>
+        <item>TEES - Equal</item>
+        <item>REDUCERS</item>
+        <item>FLANGES - Nominal Size</item>
+        <item>FLANGES - PCD</item>
+    </string-array>
+
+    <string-array name="schedule">
+        <item>SCHEDULE</item>
+        <item>40</item>
+        <item>80</item>
+    </string-array>
+
+    <string-array name="flangesTable">
+        <item>Table (A/B)</item>
+        <item>6/3</item>
+        <item>10/3</item>
+        <item>16/3</item>
+        <item>25/3</item>
+        <item>40/3</item>
+        <item>600/3</item>
+        <item>1000/3</item>
+        <item>1600/3</item>
+        <item>2500/3</item>
+        <item>4000/3</item>
+        <item>D/3</item>
+        <item>E/3</item>
+        <item>F/3</item>
+        <item>ASA 150</item>
+    </string-array>
+</resources>
