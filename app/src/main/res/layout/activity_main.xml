@@ -9,22 +9,39 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:gravity="center_horizontal|center_vertical"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <Spinner
-            android:id="@+id/materials"
-            android:layout_width="match_parent"
-            android:layout_height="55dp" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="145dp" />
+            android:layout_height="118dp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Pipes, Fittings, and Flanges"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="66dp" />
+
+        <Spinner
+            android:id="@+id/materials"
+            android:layout_width="323dp"
+            android:layout_height="61dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="88dp" />
 
         <Button
             android:id="@+id/button"
@@ -32,6 +49,7 @@
             android:layout_height="65dp"
             android:onClick="btnClick"
             android:text="Submit" />
+
     </LinearLayout>
 
 

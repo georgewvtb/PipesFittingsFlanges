@@ -57,18 +57,24 @@ public class teesInput extends AppCompatActivity {
     }
 
     public void submitTees(View v) {
-        EditText teesNominalSize = findViewById(R.id.nominalSizeTees);
+        try {
+            EditText teesNominalSize = findViewById(R.id.nominalSizeTees);
+            String teesKey = teesNominalSize.getText().toString();
+            String[] teesValues = teesPairValues.get(teesKey);
 
-        String teesKey = teesNominalSize.getText().toString();
-
-        String[] teesValues = teesPairValues.get( teesKey );
-
-        if (teesValues != null) {
-            Intent teesDisplay = new Intent(this, teesDisplay.class);
-            teesDisplay.putExtra("teesValues", teesValues);
-            startActivity(teesDisplay);
-        } else {
-
+            if (teesNominalSize.length() == 0) {
+                teesNominalSize.setError("Enter Nominal Size");
+            }
+            else if (teesValues == null) {
+                teesNominalSize.setError("Invalid Nominal Size");
+            }
+            else if (teesValues != null) {
+                    Intent teesDisplay = new Intent(this, teesDisplay.class);
+                    teesDisplay.putExtra("teesValues", teesValues);
+                    startActivity(teesDisplay);
+                }
+        } catch (Exception e) {
+            throw new RuntimeException("Error in submitting: "+ e);
         }
     }
 }

@@ -39,10 +39,11 @@ public class flangesPcdInput extends AppCompatActivity {
                     Log.e("Data ",  " " + data[0] + " " + data[1] + " "
                             + data[2] + " " + data[3] + " " + data[4] + " "
                             + data[5] + " " + data[6] + " " + data[7] + " "
-                            + data[8] + " " + data[9] + " " + data[10] + " " + data[11] + " "
-                            + data[12] + " " + data[13] + " " + data[14] + " "
-                            + data[15] + " " + data[16] + " " + data[17] + " "
-                            + data[18] + " " + data[19] + " " + data[20]);
+                            + data[8] + " " + data[9] + " " + data[10] + " "
+                            + data[11] + " " + data[12] + " " + data[13] + " "
+                            + data[14] + " " + data[15] + " " + data[16] + " "
+                            + data[17] + " " + data[18] + " " + data[19] + " "
+                            + data[20] + " " + data[21]);
 
                     flangesPcdPairValues.put(
                             data[0],
@@ -68,6 +69,7 @@ public class flangesPcdInput extends AppCompatActivity {
                                     String.valueOf(data[18]),
                                     String.valueOf(data[19]),
                                     String.valueOf(data[20]),
+                                    String.valueOf(data[21]),
                             }
                     );
                 } catch (Exception e) {
@@ -81,18 +83,23 @@ public class flangesPcdInput extends AppCompatActivity {
     }
 
     public void submitFlangesPcd(View v) {
-        EditText flangesPCD = findViewById(R.id.etFlangesPcd);
+        try {
+            EditText flangesPCD = findViewById(R.id.etFlangesPcd);
+            String flangesPcdKey = flangesPCD.getText().toString();
+            String[] flangesPcdValues = flangesPcdPairValues.get(flangesPcdKey);
 
-        String flangesPcdKey = flangesPCD.getText().toString();
-
-        String[] flangesPcdValues = flangesPcdPairValues.get( flangesPcdKey );
-
-        if (flangesPcdValues != null) {
-            Intent flangesPcdDisplay = new Intent(this, flangesPcdDisplay.class);
-            flangesPcdDisplay.putExtra("flangesPcdValues", flangesPcdValues);
-            startActivity(flangesPcdDisplay);
-        } else {
-
+            if (flangesPCD.length() == 0) {
+                flangesPCD.setError("Enter PCD");
+            } else if (flangesPcdValues == null) {
+                flangesPCD.setError("Invalid PCD");
+            }
+            else if (flangesPcdValues != null) {
+                    Intent flangesPcdDisplay = new Intent(this, flangesPcdDisplay.class);
+                    flangesPcdDisplay.putExtra("flangesPcdValues", flangesPcdValues);
+                    startActivity(flangesPcdDisplay);
+                }
+        } catch (Exception e) {
+            throw new RuntimeException("Error in submitting: "+ e);
         }
     }
 }

@@ -47,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity( teesIntent );
                 break;
 
-            case "REDUCERS":
+            case "REDUCERS - CONCENTRIC & ECCENTRIC":
                 Intent reducesIntent = new Intent(this, reducesInput.class);
                 startActivity( reducesIntent );
                 break;
 
-            case "FLANGES - NOMINAL SIZE":
+            case "FLANGES - NOMINAL SIZE & TABLE":
                 Intent flangesNomSizeTableIntent = new Intent(this, flangesNomSizeTableInput.class);
                 startActivity( flangesNomSizeTableIntent );
                 break;

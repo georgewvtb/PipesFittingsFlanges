@@ -15,12 +15,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="69dp" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="Nominal Size (mm)"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -41,6 +46,7 @@
             android:layout_height="34dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="Table"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -61,6 +67,7 @@
             android:layout_height="40dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="Thickness (mm)"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -81,6 +88,7 @@
             android:layout_height="40dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="Holes Number (mm)"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -101,6 +109,7 @@
             android:layout_height="40dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="Holes Diameter (mm)"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -121,6 +130,7 @@
             android:layout_height="40dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="PCD (mm)"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView

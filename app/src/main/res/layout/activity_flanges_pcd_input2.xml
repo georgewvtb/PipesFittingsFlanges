@@ -18,12 +18,25 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="132dp" />
+            android:layout_height="174dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Flanges - PCD"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="34dp" />
 
         <EditText
             android:id="@+id/etFlangesPcd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="337dp"
+            android:layout_height="62dp"
             android:ems="10"
             android:hint="PCD (mm)"
             android:inputType="text|textNoSuggestions" />

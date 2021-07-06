@@ -11,12 +11,17 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="67dp" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="Nominal Size (mm)"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -37,6 +42,7 @@
             android:layout_height="34dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="Schedule"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -57,6 +63,7 @@
             android:layout_height="40dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="Outside Diameter (mm)"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -76,7 +83,8 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center_horizontal|center_vertical"
-            android:text="Center To End (mm)"
+            android:text="Center To End A (mm)"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -97,6 +105,7 @@
             android:layout_height="40dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="Internal Diameter (mm)"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -117,6 +126,7 @@
             android:layout_height="40dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="Wall Thickness (mm)"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView

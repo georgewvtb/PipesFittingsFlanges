@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".pipesInput">
 
     <LinearLayout
@@ -18,12 +19,25 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="132dp" />
+            android:layout_height="148dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="334dp"
+            android:layout_height="58dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Pipes"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="41dp" />
 
         <EditText
             android:id="@+id/nominalBorePipes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="329dp"
+            android:layout_height="60dp"
             android:ems="10"
             android:hint="Nominal Bore (mm)"
             android:inputType="text|textNoSuggestions" />
@@ -34,12 +48,12 @@
 
         <Spinner
             android:id="@+id/pipesTextView"
-            android:layout_width="match_parent"
-            android:layout_height="46dp" />
+            android:layout_width="329dp"
+            android:layout_height="60dp" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="61dp" />
+            android:layout_height="41dp" />
 
         <Button
             android:id="@+id/pipesSubmitButton"
@@ -47,6 +61,7 @@
             android:layout_height="65dp"
             android:onClick="submitPipes"
             android:text="SUBMIT" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

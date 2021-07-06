@@ -99,28 +99,36 @@ public class pipesInput extends AppCompatActivity {
         // Sets the adapter for the spinner
         schedule.setAdapter(scheduleAdapter);
     }
-
+    
     public void submitPipes(View v){
-        EditText pipesNominalBore = findViewById(R.id.nominalBorePipes);
-        Spinner pipesSchedule = findViewById(R.id.pipesTextView);
+        try {
+            EditText pipesNominalBore = findViewById(R.id.nominalBorePipes);
+            Spinner pipesSchedule = findViewById(R.id.pipesTextView);
 
-        String pipesKey = pipesNominalBore.getText().toString() + ";";
-        if (pipesSchedule.getSelectedItemPosition() != 0) {
-            pipesKey += pipesSchedule.getSelectedItem().toString();
+            String pipesKey = pipesNominalBore.getText().toString() + ";";
 
-            String[] pipesValues = pipesPairValues.get( pipesKey );
+            if (pipesNominalBore.length() == 0) {
+                pipesNominalBore.setError("Enter Nominal Bore");
+            } else {
+                if (pipesSchedule.getSelectedItemPosition() != 0) {
+                    pipesKey += pipesSchedule.getSelectedItem().toString();
 
-            if (pipesValues != null) {
-                Intent pipesDisplay = new Intent(this, pipesDisplay.class);
-                pipesDisplay.putExtra("pipesValues", pipesValues);
-                startActivity(pipesDisplay);
-            }
-            else {
+                    String[] pipesValues = pipesPairValues.get(pipesKey);
 
+                    if (pipesValues == null) {
+                        pipesNominalBore.setError("Invalid Nominal Bore");
+                    }
+                    else if (pipesValues != null) {
+                        Intent pipesDisplay = new Intent(this, pipesDisplay.class);
+                        pipesDisplay.putExtra("pipesValues", pipesValues);
+                        startActivity(pipesDisplay);
+                    }
+                }
             }
         }
-        else {
-
+        catch (Exception e) {
+            throw new RuntimeException("Error in submitting: "+ e);
         }
     }
 }
+

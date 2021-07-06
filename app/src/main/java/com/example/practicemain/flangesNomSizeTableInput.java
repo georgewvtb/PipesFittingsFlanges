@@ -100,24 +100,32 @@ public class flangesNomSizeTableInput extends AppCompatActivity {
     }
 
     public void submitFlangesNomSizeTable(View v) {
-        EditText flangesNomSizeTableNominalSize = findViewById(R.id.nominalSizeFlangesNomSizeTable);
-        Spinner flangesTable = findViewById(R.id.flangesNomSizeTableTextView);
+        try {
+            EditText flangesNomSizeTableNominalSize = findViewById(R.id.nominalSizeFlangesNomSizeTable);
+            Spinner flangesTable = findViewById(R.id.flangesNomSizeTableTextView);
 
-        String flangesNomSizeTableNominalSizeKey = flangesNomSizeTableNominalSize.getText().toString() + ";";
-        //String flangesNomSizeTableTableKey = flangesNomSizeTableTable.getText().toString();
+            String flangesNomSizeTableNominalSizeKey = flangesNomSizeTableNominalSize.getText().toString() + ";";
 
-        if (flangesTable.getSelectedItemPosition() != 0) {
-            flangesNomSizeTableNominalSizeKey += flangesTable.getSelectedItem().toString();
-
-            String[] flangesNomSizeTableValues = flangesNomSizeTablePairValues.get(flangesNomSizeTableNominalSizeKey);
-
-            if (flangesNomSizeTableValues != null) {
-                Intent flangesNomSizeTableDisplay = new Intent(this, flangesNomSizeTableDisplay.class);
-                flangesNomSizeTableDisplay.putExtra("flangesNomSizeTableValues", flangesNomSizeTableValues);
-                startActivity(flangesNomSizeTableDisplay);
+            if (flangesNomSizeTableNominalSize.length() == 0) {
+                flangesNomSizeTableNominalSize.setError("Enter Nominal Size");
             } else {
+                if (flangesTable.getSelectedItemPosition() != 0) {
+                    flangesNomSizeTableNominalSizeKey += flangesTable.getSelectedItem().toString();
+
+                    String[] flangesNomSizeTableValues = flangesNomSizeTablePairValues.get(flangesNomSizeTableNominalSizeKey);
+
+                    if (flangesNomSizeTableValues == null) {
+                        flangesNomSizeTableNominalSize.setError("Invalid Nominal Size");
+
+                    } else if (flangesNomSizeTableValues != null) {
+                        Intent flangesNomSizeTableDisplay = new Intent(this, flangesNomSizeTableDisplay.class);
+                        flangesNomSizeTableDisplay.putExtra("flangesNomSizeTableValues", flangesNomSizeTableValues);
+                        startActivity(flangesNomSizeTableDisplay);
+                    }
+                }
             }
-        } else {
+        } catch (Exception e) {
+            throw new RuntimeException("Error in submitting: "+ e);
         }
     }
 }

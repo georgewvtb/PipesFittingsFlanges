@@ -100,26 +100,32 @@ public class elbowsInput extends AppCompatActivity {
     }
 
     public void submitElbows(View v){
-        EditText elbowsNominalBore = findViewById(R.id.nominalSizeElbows);
-        Spinner elbowsSchedule = findViewById(R.id.elbowsTextView);
+        try {
+            EditText elbowsNominalSize = findViewById(R.id.nominalSizeElbows);
+            Spinner elbowsSchedule = findViewById(R.id.elbowsTextView);
 
-        String elbowsKey = elbowsNominalBore.getText().toString() + ";";
-        if (elbowsSchedule.getSelectedItemPosition() != 0) {
-            elbowsKey += elbowsSchedule.getSelectedItem().toString();
+            String elbowsKey = elbowsNominalSize.getText().toString() + ";";
 
-            String[] elbowsValues = elbowsPairValues.get( elbowsKey );
+            if (elbowsNominalSize.length() == 0) {
+                elbowsNominalSize.setError("Enter Nominal Size");
+            } else {
+                if (elbowsSchedule.getSelectedItemPosition() != 0) {
+                    elbowsKey += elbowsSchedule.getSelectedItem().toString();
 
-            if (elbowsValues != null) {
-                Intent elbowsDisplay = new Intent(this, elbowsDisplay.class);
-                elbowsDisplay.putExtra("values", elbowsValues);
-                startActivity(elbowsDisplay);
+                    String[] elbowsValues = elbowsPairValues.get(elbowsKey);
+
+                    if (elbowsValues == null) {
+                        elbowsNominalSize.setError("Invalid Nominal Size");
+                    }
+                    else if (elbowsValues != null) {
+                        Intent elbowsDisplay = new Intent(this, elbowsDisplay.class);
+                        elbowsDisplay.putExtra("values", elbowsValues);
+                        startActivity(elbowsDisplay);
+                    }
+                }
             }
-            else {
-
-            }
-        }
-        else {
-
+        } catch (Exception e) {
+            throw new RuntimeException("Error in submitting: "+ e);
         }
     }
 }
