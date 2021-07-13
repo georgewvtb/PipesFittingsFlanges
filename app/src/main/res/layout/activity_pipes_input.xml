@@ -7,61 +7,73 @@
     android:layout_gravity="center"
     tools:context=".pipesInput">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="334dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="127dp"
+        android:layout_marginEnd="38dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Pipes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nominalBorePipes"
+        android:layout_width="329dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="41dp"
+        android:ems="10"
+        android:hint="Nominal Bore (mm)"
+        android:inputType="text|textNoSuggestions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Spinner
+        android:id="@+id/pipesTextView"
+        android:layout_width="329dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="41dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nominalBorePipes" />
+
+    <android.widget.TextView
+        android:id="@+id/pipesInvisibleSpinnerError"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginEnd="89dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pipesTextView" />
+
+    <Button
+        android:id="@+id/pipesSubmitButton"
+        android:layout_width="336dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="239dp"
+        android:onClick="submitPipes"
+        android:text="SUBMIT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/pipesInvisibleSpinnerError" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="148dp" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="334dp"
-            android:layout_height="58dp"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="Pipes"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="41dp" />
-
-        <EditText
-            android:id="@+id/nominalBorePipes"
-            android:layout_width="329dp"
-            android:layout_height="60dp"
-            android:ems="10"
-            android:hint="Nominal Bore (mm)"
-            android:inputType="text|textNoSuggestions" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="41dp" />
-
-        <Spinner
-            android:id="@+id/pipesTextView"
-            android:layout_width="329dp"
-            android:layout_height="60dp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="41dp" />
-
-        <Button
-            android:id="@+id/pipesSubmitButton"
-            android:layout_width="336dp"
-            android:layout_height="65dp"
-            android:onClick="submitPipes"
-            android:text="SUBMIT" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

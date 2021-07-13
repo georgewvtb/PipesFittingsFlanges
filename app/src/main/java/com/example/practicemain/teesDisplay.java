@@ -13,8 +13,12 @@ public class teesDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tees_display);
 
+        // Get tees input activity's intent
         Intent intent = getIntent();
+        // Get tees input activity's array
         String[] values = (String[])intent.getExtras().get("teesValues");
+
+        // Displays data from array
 
         TextView teesNominalSize = findViewById(R.id.teesNominalSize);
         teesNominalSize.setText(String.valueOf(values[0]));

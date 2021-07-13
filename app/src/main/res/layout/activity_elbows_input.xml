@@ -6,71 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".elbowsInput">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="336dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="36dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Elbows - Long Radius"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nominalSizeElbows"
+        android:layout_width="341dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="33dp"
+        android:ems="10"
+        android:hint="Nominal Size (mm)"
+        android:inputType="text|textNoSuggestions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+    <Spinner
+        android:id="@+id/elbowsTextView"
+        android:layout_width="341dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nominalSizeElbows" />
+
+    <android.widget.TextView
+        android:id="@+id/elbowsInvisibleSpinnerError"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="185dp"
+        android:layout_marginEnd="76dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elbowsTextView" />
+
+    <Button
+        android:id="@+id/elbowsSubmitButton"
+        android:layout_width="336dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="38dp"
+        android:onClick="submitElbows"
+        android:text="SUBMIT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elbowsInvisibleSpinnerError" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="89dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="47dp" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="Elbows - Long Radius"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="41dp" />
-
-        <EditText
-            android:id="@+id/nominalSizeElbows"
-            android:layout_width="341dp"
-            android:layout_height="60dp"
-            android:ems="10"
-            android:hint="Nominal Size (mm)"
-            android:inputType="text|textNoSuggestions" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="41dp" />
-
-        <Spinner
-            android:id="@+id/elbowsTextView"
-            android:layout_width="332dp"
-            android:layout_height="58dp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="61dp" />
-
-        <Button
-            android:id="@+id/elbowsSubmitButton"
-            android:layout_width="336dp"
-            android:layout_height="65dp"
-            android:onClick="submitElbows"
-            android:text="SUBMIT" />
-
-        <Space
-            android:layout_width="400dp"
-            android:layout_height="80dp" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="176dp"
-            app:srcCompat="@drawable/elbows" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/elbowsSubmitButton"
+        app:srcCompat="@drawable/elbows" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

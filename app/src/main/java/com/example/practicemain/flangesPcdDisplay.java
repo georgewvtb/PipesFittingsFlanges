@@ -13,8 +13,12 @@ public class flangesPcdDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flanges_pcd_display);
 
+        // Get flanges - pcd input activity's intent
         Intent intent = getIntent();
+        // Get flanges - pcd input activity's array
         String[] values = (String[])intent.getExtras().get("flangesPcdValues");
+
+        // Display data from array
 
         TextView flangesPcdPcd = findViewById(R.id.flangesPcdPcd);
         flangesPcdPcd.setText(String.valueOf(values[1]));

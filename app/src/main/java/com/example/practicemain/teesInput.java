@@ -17,9 +17,13 @@ import java.util.Map;
 
 public class teesInput extends AppCompatActivity {
 
+    // Initializes input stream variable
     InputStream inputStream;
 
+    // Initializes tees hashmap
     Map<String, String[]> teesPairValues = new HashMap<>();
+
+    // Initializes data array
     String[] data;
 
     @Override
@@ -27,19 +31,28 @@ public class teesInput extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tees_input);
 
+        // Gets tees csv file
         inputStream = getResources().openRawResource(R.raw.tees);
 
+        // Reads tees csv file
         BufferedReader teesReader = new BufferedReader(new InputStreamReader(inputStream));
         try {
+            // Initializes csvLine variable
             String csvLine;
+            // Loops through csv file. Loop ends when data ends
             while ((csvLine = teesReader.readLine()) != null) {
+                // Splits csv data in each row
                 data = csvLine.split(";");
                 try {
                     Log.e("Data ", "" + data[0] + " " + data[1] + " "
                             + data[2]);
 
+                    // Adds each row of data to hashmap (dictionary)
+                    // Key value pair
                     teesPairValues.put(
+                            // Key name. Used to retrieve data (values)
                             data[0],
+                            // Values. Placed in an array
                             new String[]{
                                     String.valueOf(data[0]),
                                     String.valueOf(data[1]),
@@ -58,16 +71,26 @@ public class teesInput extends AppCompatActivity {
 
     public void submitTees(View v) {
         try {
-            EditText teesNominalSize = findViewById(R.id.nominalSizeTees);
-            String teesKey = teesNominalSize.getText().toString();
+            // Edit text to enter tees nominal size
+            EditText et_teesNominalSize = findViewById(R.id.nominalSizeTees);
+
+            // Converts edit text value to a string
+            String teesKey = et_teesNominalSize.getText().toString();
+
+            // Adds selected nominal size and respective data to an array
             String[] teesValues = teesPairValues.get(teesKey);
 
-            if (teesNominalSize.length() == 0) {
-                teesNominalSize.setError("Enter Nominal Size");
+            // Displays custom error message if nominal size edit text is empty
+            if (et_teesNominalSize.length() == 0) {
+                et_teesNominalSize.setError("Enter Nominal Size");
+                et_teesNominalSize.requestFocus();
             }
+            // Displays custom error message if nominal size value is invalid
             else if (teesValues == null) {
-                teesNominalSize.setError("Invalid Nominal Size");
+                et_teesNominalSize.setError("Invalid Nominal Size");
+                et_teesNominalSize.requestFocus();
             }
+            // Sends the array to the tees display activity
             else if (teesValues != null) {
                     Intent teesDisplay = new Intent(this, teesDisplay.class);
                     teesDisplay.putExtra("teesValues", teesValues);

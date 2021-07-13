@@ -13,8 +13,12 @@ public class pipesDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pipes_display);
 
+        // Get pipes input activity's intent
         Intent intent = getIntent();
+        // Get pipes input activity's array
         String[] values = (String[])intent.getExtras().get("pipesValues");
+
+        // Display data from array
 
         TextView nominalBore = findViewById(R.id.pipesNominalBore);
         nominalBore.setText(String.valueOf(values[0]));

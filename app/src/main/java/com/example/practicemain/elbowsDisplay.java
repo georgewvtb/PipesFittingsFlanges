@@ -13,8 +13,12 @@ public class elbowsDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elbows_display);
 
+        // Get elbows input activity's intent
         Intent intent = getIntent();
+        // Get elbows input activity's array
         String[] values = (String[])intent.getExtras().get("values");
+
+        // Displays data from array
 
         TextView elbowsNominalSize = findViewById(R.id.elbowsNominalSize);
         elbowsNominalSize.setText(String.valueOf(values[0]));

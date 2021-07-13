@@ -19,7 +19,17 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="118dp" />
+            android:layout_height="96dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="103dp"
+            app:srcCompat="@drawable/steamhouse_logo" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/textView13"

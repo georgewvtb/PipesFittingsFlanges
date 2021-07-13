@@ -17,7 +17,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="69dp" />
+            android:layout_height="19dp" />
 
         <TextView
             android:id="@+id/textView"
@@ -38,7 +38,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="26dp" />
+            android:layout_height="10dp" />
 
         <TextView
             android:id="@+id/TextView2"
@@ -59,7 +59,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="32dp" />
+            android:layout_height="12dp" />
 
         <TextView
             android:id="@+id/textView3"
@@ -80,7 +80,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="26dp" />
+            android:layout_height="11dp" />
 
         <TextView
             android:id="@+id/textView4"
@@ -101,7 +101,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="26dp" />
+            android:layout_height="12dp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -122,7 +122,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="26dp" />
+            android:layout_height="11dp" />
 
         <TextView
             android:id="@+id/textView6"
@@ -135,6 +135,48 @@
 
         <TextView
             android:id="@+id/flangesNomSizeTablePCD"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="TextView"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Outside Diameter  (mm)"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/flangesNomSizeTableOutsideDiameter"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="TextView"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Internal Diameter  (mm)"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/flangesNomSizeTableInternalDiameter"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:gravity="center_horizontal|center_vertical"

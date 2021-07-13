@@ -13,8 +13,12 @@ public class reducesDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reduces_display);
 
+        // Get reducers input activity's intent
         Intent intent = getIntent();
+        // Get reducers input activity's array
         String[] values = (String[])intent.getExtras().get("reducersValues");
+
+        // Displays data from array
 
         TextView reducersNominalSize = findViewById(R.id.reducersNominalSize);
         reducersNominalSize.setText(String.valueOf(values[0]));

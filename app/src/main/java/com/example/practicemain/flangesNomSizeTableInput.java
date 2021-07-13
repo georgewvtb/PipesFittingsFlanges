@@ -24,10 +24,13 @@ import java.util.Map;
 
 public class flangesNomSizeTableInput extends AppCompatActivity {
 
+    // Initializes input stream variable
     InputStream inputStream;
 
+    // Initializes flanges - nominal size & table hashmap
     Map<String, String[]> flangesNomSizeTablePairValues = new HashMap<>();
 
+    // Initializes data array
     String[] data;
 
     @Override
@@ -35,19 +38,29 @@ public class flangesNomSizeTableInput extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flanges_nom_size_table_input);
 
+        // Gets flanges - nominal size & table csv file
         inputStream = getResources().openRawResource(R.raw.flanges_nomsize_table);
 
+        // Reads flanges - nominal size & table csv file
         BufferedReader flangesNomSizeTableReader = new BufferedReader(new InputStreamReader(inputStream));
         try {
+            // initializes csvLine variable
             String csvLine;
+            // Loops through csv file. Loop ends when data ends
             while ((csvLine = flangesNomSizeTableReader.readLine()) != null) {
+                // Splits csv data in each row
                 data = csvLine.split(";");
                 try {
                     Log.e("Data ", "" + data[0] + " " + data[1] + " "
-                            + data[2] + " " + data[3] + " " + data[4] + " " + data[5]);
+                            + data[2] + " " + data[3] + " " + data[4] + " "
+                            + data[5] + data[6] + " " + data[7]);
 
+                    // Adds each row of data to hashmap (dictionary)
+                    // Key value pair
                     flangesNomSizeTablePairValues.put(
+                            // Key name. Used to retrieve data (values)
                             data[0] + ";" + data[1],
+                            // Values. Placed in an array
                             new String[]{
                                     String.valueOf(data[0]),
                                     String.valueOf(data[1]),
@@ -55,6 +68,8 @@ public class flangesNomSizeTableInput extends AppCompatActivity {
                                     String.valueOf(data[3]),
                                     String.valueOf(data[4]),
                                     String.valueOf(data[5]),
+                                    String.valueOf(data[6]),
+                                    String.valueOf(data[7]),
                             }
                     );
                 } catch (Exception e) {
@@ -101,27 +116,56 @@ public class flangesNomSizeTableInput extends AppCompatActivity {
 
     public void submitFlangesNomSizeTable(View v) {
         try {
-            EditText flangesNomSizeTableNominalSize = findViewById(R.id.nominalSizeFlangesNomSizeTable);
+            // Edit text to enter flanges nominal size
+            EditText et_flangesNomSizeTableNominalSize = findViewById(R.id.nominalSizeFlangesNomSizeTable);
+            // Spinner to select a table in dropdown list
             Spinner flangesTable = findViewById(R.id.flangesNomSizeTableTextView);
 
-            String flangesNomSizeTableNominalSizeKey = flangesNomSizeTableNominalSize.getText().toString() + ";";
+            // Converts edit text value to a string
+            String flangesNomSizeTableNominalSizeKey = et_flangesNomSizeTableNominalSize.getText().toString() + ";";
 
-            if (flangesNomSizeTableNominalSize.length() == 0) {
-                flangesNomSizeTableNominalSize.setError("Enter Nominal Size");
+            // View schedule spinner custom error
+            View flangesViewSpinnerError = flangesTable.getSelectedView();
+            // Text view to display "!" icon to spinner
+            TextView flangesSpinnerErrorIcon = (TextView)flangesViewSpinnerError;
+            // Text view for spinner custom error message
+            TextView flangesInvisibleSpinnerError = (TextView)findViewById(R.id.flangesInvisibleSpinnerError);
+
+            // Displays custom error message if nominal size edit text is empty
+            if (et_flangesNomSizeTableNominalSize.length() == 0) {
+                et_flangesNomSizeTableNominalSize.setError("Enter Nominal Size");
+                et_flangesNomSizeTableNominalSize.requestFocus();
+            }
+            // Sets custom spinner error message if a table is not selected
+            else if (flangesTable.getSelectedItemPosition() == 0) {
+                flangesSpinnerErrorIcon.setError("Icon"); // Displays Icon error in spinner
+                flangesInvisibleSpinnerError.setBackgroundColor(Color.BLACK);
+                flangesInvisibleSpinnerError.setTextColor(Color.WHITE);
+                flangesInvisibleSpinnerError.setText("Select a Table");
+                flangesTable.requestFocus();
             } else {
-                if (flangesTable.getSelectedItemPosition() != 0) {
-                    flangesNomSizeTableNominalSizeKey += flangesTable.getSelectedItem().toString();
+                // Clears spinner custom error message if a table is selected
+                flangesInvisibleSpinnerError.setText(null);
+                flangesInvisibleSpinnerError.setBackgroundColor(Color.WHITE);
+            }
 
-                    String[] flangesNomSizeTableValues = flangesNomSizeTablePairValues.get(flangesNomSizeTableNominalSizeKey);
+            // Runs if the nominal size and schedule are entered
+            if (flangesTable.getSelectedItemPosition() != 0) {
+                flangesNomSizeTableNominalSizeKey += flangesTable.getSelectedItem().toString();
 
-                    if (flangesNomSizeTableValues == null) {
-                        flangesNomSizeTableNominalSize.setError("Invalid Nominal Size");
+                // Adds selected nominal size, table, and respective data to an array
+                String[] flangesNomSizeTableValues = flangesNomSizeTablePairValues.get(flangesNomSizeTableNominalSizeKey);
 
-                    } else if (flangesNomSizeTableValues != null) {
-                        Intent flangesNomSizeTableDisplay = new Intent(this, flangesNomSizeTableDisplay.class);
-                        flangesNomSizeTableDisplay.putExtra("flangesNomSizeTableValues", flangesNomSizeTableValues);
-                        startActivity(flangesNomSizeTableDisplay);
-                    }
+                // Displays custom error message if nominal size value is invalid
+                if (flangesNomSizeTableValues == null) {
+                    et_flangesNomSizeTableNominalSize.setError("Invalid Nominal Size & Table");
+                    flangesTable.requestFocus();
+
+                // Sends the array to the flanges nominal size & table display activity
+                } else if (flangesNomSizeTableValues != null) {
+                    Intent flangesNomSizeTableDisplay = new Intent(this, flangesNomSizeTableDisplay.class);
+                    flangesNomSizeTableDisplay.putExtra("flangesNomSizeTableValues", flangesNomSizeTableValues);
+                    startActivity(flangesNomSizeTableDisplay);
                 }
             }
         } catch (Exception e) {

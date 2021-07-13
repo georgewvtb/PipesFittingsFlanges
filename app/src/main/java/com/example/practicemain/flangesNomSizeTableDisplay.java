@@ -12,8 +12,13 @@ public class flangesNomSizeTableDisplay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flanges_nom_size_table_display);
+
+        // Get flanges - nominal size & table input activity's intent
         Intent intent = getIntent();
+        // Get flanges - nominal size & table input activity's array
         String[] values = (String[])intent.getExtras().get("flangesNomSizeTableValues");
+
+        // Displays data from array
 
         TextView flangesNomSizeTableNominalSize = findViewById(R.id.flangesNomSizeTableNominalSize);
         flangesNomSizeTableNominalSize.setText(String.valueOf(values[0]));
@@ -32,5 +37,11 @@ public class flangesNomSizeTableDisplay extends AppCompatActivity {
 
         TextView flangesNomSizeTablePCD = findViewById(R.id.flangesNomSizeTablePCD);
         flangesNomSizeTablePCD.setText(String.valueOf(values[5]));
+
+        TextView flangesNomSizeTableOutsideDiameter = findViewById(R.id.flangesNomSizeTableOutsideDiameter);
+        flangesNomSizeTableOutsideDiameter.setText(String.valueOf(values[6]));
+
+        TextView flangesNomSizeTableInternalDiameter = findViewById(R.id.flangesNomSizeTableInternalDiameter);
+        flangesNomSizeTableInternalDiameter.setText(String.valueOf(values[7]));
     }
 }

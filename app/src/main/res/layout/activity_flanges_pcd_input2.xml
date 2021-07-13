@@ -18,7 +18,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="174dp" />
+            android:layout_height="101dp" />
 
         <TextView
             android:id="@+id/textView11"
@@ -51,6 +51,16 @@
             android:layout_height="65dp"
             android:onClick="submitFlangesPcd"
             android:text="SUBMIT" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="64dp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            app:srcCompat="@drawable/flanges" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
