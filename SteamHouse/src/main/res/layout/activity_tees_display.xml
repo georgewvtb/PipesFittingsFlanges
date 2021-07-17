@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
     tools:context=".TeesDisplay">
 
     <LinearLayout
@@ -13,12 +17,12 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="206dp" />
+            android:layout_height="34dp" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|center_vertical"
             android:text="Nominal Size (mm)"
             android:textStyle="bold"
@@ -27,7 +31,7 @@
         <TextView
             android:id="@+id/teesNominalSize"
             android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|center_vertical"
             android:text="TextView"
             android:textSize="20sp" />
@@ -39,7 +43,7 @@
         <TextView
             android:id="@+id/TextView2"
             android:layout_width="match_parent"
-            android:layout_height="34dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|center_vertical"
             android:text="Center To End - Run A (mm)"
             android:textStyle="bold"
@@ -48,7 +52,7 @@
         <TextView
             android:id="@+id/teesCenterToEndA"
             android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|center_vertical"
             android:text="TextView"
             android:textSize="20sp" />
@@ -60,7 +64,7 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|center_vertical"
             android:text="Center To End - Run B (mm)"
             android:textStyle="bold"
@@ -69,7 +73,7 @@
         <TextView
             android:id="@+id/teesCenterToEndB"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|center_vertical"
             android:text="TextView"
             android:textSize="20sp" />
@@ -77,4 +81,4 @@
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,8 +1,11 @@
 package com.example.SteamHouse;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,6 +43,15 @@ public class ReducersInput extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reducers_input);
 
+        // Sets action bar to a logo
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setLogo(R.drawable.steamhouse_logo);
+        actionBar.setDisplayUseLogoEnabled(true);
+        // Changes action bar color
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("WHITE"));
+        actionBar.setBackgroundDrawable(colorDrawable);
+
         // Gets reducers csv file
         inputStream = getResources().openRawResource(R.raw.reducers1);
 
@@ -53,8 +65,11 @@ public class ReducersInput extends AppCompatActivity {
                 // Splits csv data in each row
                 data = csvLine.split(";");
                 try {
+
+                    // Log.e displays data in Logcat for programmer use
                     Log.e("Data ", "" + data[0] + " " + data[1] + " "
                             + data[2]);
+
 
                     // Adds each row of data to hashmap (dictionary)
                     // Key value pair
@@ -68,11 +83,14 @@ public class ReducersInput extends AppCompatActivity {
                                     String.valueOf(data[2]),//.replaceAll(",", ".")),
                             }
                     );
+                    // Exception allows app to still run
                 } catch (Exception e) {
                     Log.e("Problem", e.toString());
+                   // throw new RuntimeException("Error in appending data to hashmap: "+ e);
                 }
             }
-        } catch (IOException ex) {
+        } // IOException stops app from running
+        catch (IOException ex) {
             throw new RuntimeException("Error in reading CSV file: " + ex);
         }
 

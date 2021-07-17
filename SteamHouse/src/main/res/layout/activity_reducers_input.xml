@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
     tools:context=".ReducersInput">
 
     <LinearLayout
-        android:layout_width="411dp"
-        android:layout_height="733dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,12 +24,12 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="107dp" />
+            android:layout_height="42dp" />
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="334dp"
-            android:layout_height="58dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|center_vertical"
             android:text="Reducers - Concentric &amp; Eccentric"
             android:textSize="20sp"
@@ -33,30 +37,30 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="45dp" />
+            android:layout_height="23dp" />
 
         <EditText
             android:id="@+id/nominalSizeReducers"
-            android:layout_width="329dp"
-            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nominal Size (A x B)(mm)"
             android:inputType="text|textNoSuggestions" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="61dp" />
+            android:layout_height="48dp" />
 
         <Button
             android:id="@+id/reducersSubmitButton"
-            android:layout_width="336dp"
-            android:layout_height="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="submitReducers"
             android:text="SUBMIT" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="58dp" />
+            android:layout_height="26dp" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -66,4 +70,4 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

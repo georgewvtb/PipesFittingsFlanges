@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">practiceMain</string>
+    <string name="app_name">SteamHouse</string>
 
     <string-array name="materials">
         <item>PIPES</item>

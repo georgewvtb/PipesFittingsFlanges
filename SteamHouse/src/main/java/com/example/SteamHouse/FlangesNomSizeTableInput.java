@@ -2,10 +2,12 @@ package com.example.SteamHouse;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,6 +40,15 @@ public class FlangesNomSizeTableInput extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flanges_nom_size_table_input);
 
+        // Sets action bar to a logo
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setLogo(R.drawable.steamhouse_logo);
+        actionBar.setDisplayUseLogoEnabled(true);
+        // Changes action bar color
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("WHITE"));
+        actionBar.setBackgroundDrawable(colorDrawable);
+
         // Gets flanges - nominal size & table csv file
         inputStream = getResources().openRawResource(R.raw.flanges_nomsize_table);
 
@@ -51,9 +62,12 @@ public class FlangesNomSizeTableInput extends AppCompatActivity {
                 // Splits csv data in each row
                 data = csvLine.split(";");
                 try {
+
+                    // Log.e displays data in Logcat for programmer use
                     Log.e("Data ", "" + data[0] + " " + data[1] + " "
                             + data[2] + " " + data[3] + " " + data[4] + " "
                             + data[5] + data[6] + " " + data[7]);
+
 
                     // Adds each row of data to hashmap (dictionary)
                     // Key value pair
@@ -72,10 +86,13 @@ public class FlangesNomSizeTableInput extends AppCompatActivity {
                                     String.valueOf(data[7]),
                             }
                     );
+                    // Exception allows app to still run
                 } catch (Exception e) {
                     Log.e("Problem", e.toString());
+                   // throw new RuntimeException("Error in appending data to hashmap: "+ e);
                 }
             }
+            // IOException stops app from running
         } catch (IOException ex) {
             throw new RuntimeException("Error in reading CSV file: " + ex);
         }
@@ -150,7 +167,7 @@ public class FlangesNomSizeTableInput extends AppCompatActivity {
 
                     // Displays custom error message if nominal size value is invalid
                     if (flangesNomSizeTableValues == null) {
-                        et_flangesNomSizeTableNominalSize.setError("Invalid Nominal Size & Table");
+                        et_flangesNomSizeTableNominalSize.setError("Invalid Nominal Size");
                         flangesTable.requestFocus();
 
                         // Sends the array to the flanges nominal size & table display activity

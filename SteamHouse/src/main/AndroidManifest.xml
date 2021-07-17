@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/steamhouse_icon"
+        android:label="SteamHouse"
+        android:roundIcon="@drawable/steamhouse_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.SteamHouse">
         <activity android:name="com.example.SteamHouse.ReducersDisplay2"></activity>

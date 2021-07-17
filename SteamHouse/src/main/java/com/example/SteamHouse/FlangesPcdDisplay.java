@@ -1,8 +1,11 @@
 package com.example.SteamHouse;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -13,13 +16,21 @@ public class FlangesPcdDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flanges_pcd_display);
 
-        // Get flanges - pcd input activity's intent
+        // Sets action bar to a logo
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setLogo(R.drawable.steamhouse_logo);
+        actionBar.setDisplayUseLogoEnabled(true);
+        // Changes action bar color
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("WHITE"));
+        actionBar.setBackgroundDrawable(colorDrawable);
+
+        // Gets flanges - pcd input activity's intent
         Intent intent = getIntent();
-        // Get flanges - pcd input activity's array
+        // Gets flanges - pcd input activity's array
         String[] values = (String[])intent.getExtras().get("flangesPcdValues");
 
         // Display data from array
-
         TextView flangesPcdPcd = findViewById(R.id.flangesPcdPcd);
         flangesPcdPcd.setText(String.valueOf(values[1]));
 

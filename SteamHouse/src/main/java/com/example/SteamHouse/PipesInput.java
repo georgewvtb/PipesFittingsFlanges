@@ -2,10 +2,12 @@ package com.example.SteamHouse;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,6 +40,15 @@ public class PipesInput extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pipes_input);
 
+        // Sets action bar to a logo
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setLogo(R.drawable.steamhouse_logo);
+        actionBar.setDisplayUseLogoEnabled(true);
+        // Changes action bar color
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("WHITE"));
+        actionBar.setBackgroundDrawable(colorDrawable);
+
         // Gets pipes csv file
         inputStream = getResources().openRawResource(R.raw.pipes);
 
@@ -51,6 +62,7 @@ public class PipesInput extends AppCompatActivity {
                 // Splits csv data in each row
                 data = csvLine.split(";");
                 try {
+                    // Log.e displays data in Logcat for programmer use
                     Log.e("Data ", "" + data[0] + " " + data[1] + " "
                             + data[2] + " " + data[3] + " " + data[4]);
 
@@ -60,7 +72,7 @@ public class PipesInput extends AppCompatActivity {
                             // Key name. Used to retrieve data (values)
                             data[0] + ";" + data[1],
                             // Values. Placed in an array
-                            new String[] {
+                            new String[]{
                                     String.valueOf(data[0]),
                                     String.valueOf(data[1]),
                                     String.valueOf(data[2]),
@@ -69,11 +81,15 @@ public class PipesInput extends AppCompatActivity {
                                     //Float.parseFloat(data[4].replaceAll(",", ".")),
                             }
                     );
+                    // Exception allows app to still run
                 } catch (Exception e) {
-                    Log.e("Problem", e.toString());
+                     Log.e("Problem", e.toString());
+                //    throw new RuntimeException("Error in appending data to hashmap: " + e);
+                 //   e.printStackTrace();
                 }
             }
         }
+        // IOException stops app from running
         catch (IOException ex) {
             throw new RuntimeException("Error in reading CSV file: "+ex);
         }

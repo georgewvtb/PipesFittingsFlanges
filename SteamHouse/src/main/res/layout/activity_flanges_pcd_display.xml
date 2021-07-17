@@ -17,13 +17,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView20"
-                android:layout_width="193dp"
-                android:layout_height="39dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="111dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="111dp"
@@ -31,158 +31,131 @@
                 android:gravity="center"
                 android:text="PCD (mm)"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdPcd"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/flangesPcdPcd"
-                android:layout_width="193dp"
-                android:layout_height="39dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="111dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="111dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/TextView22"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
                 android:layout_marginBottom="8dp"
                 android:gravity="center"
                 android:text="Nominal Size (mm)"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdNominalSize1"
-                app:layout_constraintEnd_toStartOf="@+id/TextView21"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/TextView21"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="11dp"
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:text="Table"
-                android:textStyle="bold"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdTable1"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/flangesPcdNominalSize1"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/flangesPcdTable1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TextView22" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/flangesPcdTable1"
-                android:layout_width="191dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="14dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdTable2"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/flangesPcdNominalSize2"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#2196F3"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/flangesPcdTable2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flangesPcdNominalSize1" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/flangesPcdTable2"
-                android:layout_width="191dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#2196F3"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdTable3"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/flangesPcdNominalSize3"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/flangesPcdTable3"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flangesPcdNominalSize2" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/flangesPcdTable3"
-                android:layout_width="191dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="13dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdTable4"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -193,232 +166,197 @@
 
             <TextView
                 android:id="@+id/flangesPcdNominalSize4"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#2196F3"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/flangesPcdTable4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flangesPcdNominalSize3" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/flangesPcdTable4"
-                android:layout_width="191dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="13dp"
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#2196F3"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdTable5"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/flangesPcdNominalSize5"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/flangesPcdTable5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flangesPcdNominalSize4" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/flangesPcdTable5"
-                android:layout_width="191dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="11dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdTable6"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/flangesPcdNominalSize6"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#2196F3"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/flangesPcdTable6"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flangesPcdNominalSize5" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/flangesPcdTable6"
-                android:layout_width="191dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="14dp"
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#2196F3"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdTable7"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/flangesPcdNominalSize7"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/flangesPcdTable7"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flangesPcdNominalSize6" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/flangesPcdTable7"
-                android:layout_width="191dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="13dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdTable8"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/flangesPcdNominalSize8"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#2196F3"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/flangesPcdTable8"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flangesPcdNominalSize7" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/flangesPcdTable8"
-                android:layout_width="191dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#2196F3"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdTable9"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/flangesPcdNominalSize9"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/flangesPcdTable9"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flangesPcdNominalSize8" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/flangesPcdTable9"
-                android:layout_width="191dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/flangesPcdTable10"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/flangesPcdNominalSize10"
-                android:layout_width="187dp"
-                android:layout_height="41dp"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="22dp"
                 android:layout_marginBottom="48dp"
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#2196F3"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/flangesPcdTable10"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flangesPcdNominalSize9" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/flangesPcdTable10"
-                android:layout_width="191dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="48dp"
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#2196F3"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
     </LinearLayout>
+
 </ScrollView>

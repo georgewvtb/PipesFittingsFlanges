@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,22 +23,18 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="96dp" />
+            android:layout_height="32dp" />
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
-            android:layout_height="103dp"
+            android:layout_height="wrap_content"
             app:srcCompat="@drawable/steamhouse_logo" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="match_parent"
-            android:layout_height="58dp"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|center_vertical"
             android:text="Pipes, Fittings, and Flanges"
             android:textSize="20sp"
@@ -42,25 +42,24 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="66dp" />
+            android:layout_height="52dp" />
 
         <Spinner
             android:id="@+id/materials"
-            android:layout_width="323dp"
-            android:layout_height="61dp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="88dp" />
+            android:layout_height="28dp" />
 
         <Button
             android:id="@+id/button"
-            android:layout_width="336dp"
-            android:layout_height="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="btnClick"
             android:text="Submit" />
 
     </LinearLayout>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
