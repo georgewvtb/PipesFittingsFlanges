@@ -15,347 +15,354 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <LinearLayout
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="45dp" />
 
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="111dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="111dp"
-                android:layout_marginBottom="9dp"
-                android:gravity="center"
-                android:text="PCD (mm)"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/flangesPcdPcd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="111dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="111dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/TextView22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="22dp"
-                android:layout_marginBottom="8dp"
-                android:gravity="center"
-                android:text="Nominal Size (mm)"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/TextView21"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="11dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="center"
-                android:text="Table"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:layout_height="match_parent" >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/textViewPCD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="PCD"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            </TableRow>
 
-            <TextView
-                android:id="@+id/flangesPcdNominalSize1"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="22dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/flangesPcdTable1"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:layout_marginBottom="14dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="20sp" />
+                android:layout_height="match_parent" >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/flangesPcdPcd1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textSize="20dp" />
+            </TableRow>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/flangesPcdNominalSize2"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="22dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="#2196F3"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/flangesPcdTable2"
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="#2196F3"
-                android:textSize="20sp" />
+                android:layout_height="15dp" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/flangesPcdNominalSize3"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="22dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/flangesPcdTable3"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:layout_marginBottom="13dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="20sp" />
+                android:layout_height="match_parent" >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/textViewNomSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Nominal Size (mm)"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/textViewTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:text="Table"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+            </TableRow>
 
-            <TextView
-                android:id="@+id/flangesPcdNominalSize4"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="22dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="#2196F3"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/flangesPcdTable4"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:layout_marginBottom="13dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="#2196F3"
-                android:textSize="20sp" />
+                android:layout_height="match_parent" >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/flangesPcdNomSize1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:text="TextView" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/flangesPcdTable1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:textSize="20dp"
+                    android:text="TextView" />
+            </TableRow>
 
-            <TextView
-                android:id="@+id/flangesPcdNominalSize5"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="22dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/flangesPcdTable5"
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:layout_marginBottom="11dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="20sp" />
+                android:layout_height="15dp" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/flangesPcdNominalSize6"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="22dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="#2196F3"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/flangesPcdTable6"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:layout_marginBottom="14dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="#2196F3"
-                android:textSize="20sp" />
+                android:layout_height="match_parent" >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/flangesPcdNominalSize2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/flangesPcdTable2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:text="TextView"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue" />
+            </TableRow>
 
-            <TextView
-                android:id="@+id/flangesPcdNominalSize7"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="22dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/flangesPcdTable7"
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:layout_marginBottom="13dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="20sp" />
+                android:layout_height="15dp" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/flangesPcdNominalSize8"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="22dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="#2196F3"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/flangesPcdTable8"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="#2196F3"
-                android:textSize="20sp" />
+                android:layout_height="match_parent" >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/flangesPcdNominalSize3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:text="TextView" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/flangesPcdTable3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:textSize="20dp"
+                    android:text="TextView" />
+            </TableRow>
 
-            <TextView
-                android:id="@+id/flangesPcdNominalSize9"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="22dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/flangesPcdTable9"
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:layout_marginBottom="16dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="20sp" />
+                android:layout_height="15dp" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/flangesPcdNominalSize10"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="22dp"
-                android:layout_marginBottom="48dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="#2196F3"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/flangesPcdTable10"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="7dp"
-                android:layout_marginBottom="48dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="#2196F3"
-                android:textSize="20sp" />
+                android:layout_height="match_parent" >
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/flangesPcdNominalSize4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/flangesPcdTable4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:text="TextView"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/flangesPcdNominalSize5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/flangesPcdTable5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:textSize="20dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/flangesPcdNominalSize6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/flangesPcdTable6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:text="TextView"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/flangesPcdNominalSize7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/flangesPcdTable7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:textSize="20dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/flangesPcdNominalSize8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue"/>
+
+                <TextView
+                    android:id="@+id/flangesPcdTable8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:text="TextView"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/flangesPcdNominalSize9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/flangesPcdTable9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:textSize="20dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/flangesPcdNominalSize10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/flangesPcdTable10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2.5"
+                    android:text="TextView"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+        </TableLayout>
 
     </LinearLayout>
 

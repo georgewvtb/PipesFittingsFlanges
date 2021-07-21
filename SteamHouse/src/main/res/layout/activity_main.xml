@@ -23,13 +23,13 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="32dp" />
+            android:layout_height="45dp" />
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/steamhouse_logo" />
+            app:srcCompat="@drawable/steamhouse_logo_2" />
 
         <TextView
             android:id="@+id/textView13"
@@ -42,7 +42,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="52dp" />
+            android:layout_height="53dp" />
 
         <Spinner
             android:id="@+id/materials"
@@ -51,7 +51,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="28dp" />
+            android:layout_height="53dp" />
 
         <Button
             android:id="@+id/button"
@@ -59,6 +59,10 @@
             android:layout_height="wrap_content"
             android:onClick="btnClick"
             android:text="Submit" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
 
     </LinearLayout>
 

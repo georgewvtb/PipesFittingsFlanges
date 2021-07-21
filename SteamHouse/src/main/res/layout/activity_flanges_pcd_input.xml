@@ -22,7 +22,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="49dp" />
+            android:layout_height="45dp" />
 
         <TextView
             android:id="@+id/textView11"
@@ -35,7 +35,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="34dp" />
+            android:layout_height="53dp" />
 
         <EditText
             android:id="@+id/etFlangesPcd"
@@ -47,7 +47,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="61dp" />
+            android:layout_height="53dp" />
 
         <Button
             android:id="@+id/flangesPcdSubmitButton"
@@ -55,6 +55,10 @@
             android:layout_height="wrap_content"
             android:onClick="submitFlangesPcd"
             android:text="SUBMIT" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
 
     </LinearLayout>
 

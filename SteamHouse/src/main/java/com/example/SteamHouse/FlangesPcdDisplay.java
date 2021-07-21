@@ -31,10 +31,10 @@ public class FlangesPcdDisplay extends AppCompatActivity {
         String[] values = (String[])intent.getExtras().get("flangesPcdValues");
 
         // Display data from array
-        TextView flangesPcdPcd = findViewById(R.id.flangesPcdPcd);
-        flangesPcdPcd.setText(String.valueOf(values[1]));
+        TextView flangesPcdPcd1 = findViewById(R.id.flangesPcdPcd1);
+        flangesPcdPcd1.setText(String.valueOf(values[1]));
 
-        TextView flangesPcdNominalSize1 = findViewById(R.id.flangesPcdNominalSize1);
+        TextView flangesPcdNominalSize1 = findViewById(R.id.flangesPcdNomSize1);
         flangesPcdNominalSize1.setText(String.valueOf(values[2]));
 
         TextView flangesPcdTable1 = findViewById(R.id.flangesPcdTable1);

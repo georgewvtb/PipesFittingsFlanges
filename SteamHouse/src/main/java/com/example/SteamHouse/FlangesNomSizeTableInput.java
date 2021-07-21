@@ -76,14 +76,14 @@ public class FlangesNomSizeTableInput extends AppCompatActivity {
                             data[0] + ";" + data[1],
                             // Values. Placed in an array
                             new String[]{
-                                    String.valueOf(data[0]),
-                                    String.valueOf(data[1]),
-                                    String.valueOf(data[2]),
-                                    String.valueOf(data[3]),
-                                    String.valueOf(data[4]),
-                                    String.valueOf(data[5]),
-                                    String.valueOf(data[6]),
-                                    String.valueOf(data[7]),
+                                    String.valueOf(data[0]).replaceAll(",", "."),
+                                    String.valueOf(data[1]).replaceAll(",", "."),
+                                    String.valueOf(data[2]).replaceAll(",", "."),
+                                    String.valueOf(data[3]).replaceAll(",", "."),
+                                    String.valueOf(data[4]).replaceAll(",", "."),
+                                    String.valueOf(data[5]).replaceAll(",", "."),
+                                    String.valueOf(data[6]).replaceAll(",", "."),
+                                    String.valueOf(data[7]).replaceAll(",", "."),
                             }
                     );
                     // Exception allows app to still run

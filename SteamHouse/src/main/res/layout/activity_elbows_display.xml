@@ -17,7 +17,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="30dp" />
+                android:layout_height="45dp" />
 
             <TextView
                 android:id="@+id/textView"
@@ -38,7 +38,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="26dp" />
+                android:layout_height="32dp" />
 
             <TextView
                 android:id="@+id/TextView2"
@@ -80,7 +80,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="26dp" />
+                android:layout_height="32dp" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -101,7 +101,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="26dp" />
+                android:layout_height="32dp" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -122,7 +122,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="26dp" />
+                android:layout_height="32dp" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -140,6 +140,20 @@
                 android:gravity="center_horizontal|center_vertical"
                 android:text="TextView"
                 android:textSize="20sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="27dp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/elbows" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
 
         </LinearLayout>
 

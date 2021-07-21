@@ -22,7 +22,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="49dp" />
+            android:layout_height="45dp" />
 
         <TextView
             android:id="@+id/textView7"
@@ -35,7 +35,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="21dp" />
+            android:layout_height="53dp" />
 
         <EditText
             android:id="@+id/nominalSizeTees"
@@ -47,7 +47,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="59dp" />
+            android:layout_height="53dp" />
 
         <Button
             android:id="@+id/teesSubmitButton"
@@ -58,13 +58,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="38dp" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/tees" />
+            android:layout_height="45dp" />
 
     </LinearLayout>
 
